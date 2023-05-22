@@ -1,0 +1,9 @@
+[Unit]
+Description=Americancoin Daemon
+
+[Service]
+Type=forking
+ExecStart=%h/bin/americancoind
+
+[Install]
+WantedBy=default.target
