@@ -4,6 +4,7 @@ Description=IPFS, InterPlanetary File System
 [Service]
 Type=simple
 ExecStart=%h/bin/%N daemon
+ExecStop=%h/bin/%N shutdown
 
 [Install]
 WantedBy=default.target
