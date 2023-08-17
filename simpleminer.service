@@ -1,0 +1,11 @@
+[Unit]
+Description=Americancoin miner
+
+[Service]
+Type=simple
+ExecStart=%h/bin/simpleminer.py
+Requires=americancoind.service
+After=americancoind.service
+
+[Install]
+WantedBy=default.target

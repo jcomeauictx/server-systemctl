@@ -1,0 +1,9 @@
+[Unit]
+Description=Clamcoin Daemon
+
+[Service]
+Type=forking
+ExecStart=%h/bin/clamd
+
+[Install]
+WantedBy=default.target
