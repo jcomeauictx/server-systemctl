@@ -1,0 +1,9 @@
+[Unit]
+Description=IPFS, InterPlanetary File System
+
+[Service]
+Type=simple
+ExecStart=%h/bin/%N daemon
+
+[Install]
+WantedBy=default.target

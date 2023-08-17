@@ -3,7 +3,7 @@ Description=Clamcoin Daemon
 
 [Service]
 Type=forking
-ExecStart=%h/bin/clamd
+ExecStart=%h/bin/%N
 
 [Install]
 WantedBy=default.target
