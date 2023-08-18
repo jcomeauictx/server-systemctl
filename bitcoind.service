@@ -1,9 +1,10 @@
 [Unit]
-Description=Bitccoin Daemon
+Description=Bitcoin Daemon
 
 [Service]
 Type=forking
 ExecStart=/usr/local/bitcoin/bin/bitcoind
+ExecStop=/usr/local/bitcoin/bin/bitcoin-cli stop
 
 [Install]
 WantedBy=default.target

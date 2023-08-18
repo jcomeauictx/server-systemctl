@@ -4,6 +4,7 @@ Description=Clamcoin Daemon
 [Service]
 Type=forking
 ExecStart=%h/bin/%N
+ExecStop=%h/bin/%N stop
 
 [Install]
 WantedBy=default.target
