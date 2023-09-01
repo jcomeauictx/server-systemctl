@@ -1,0 +1,11 @@
+[Unit]
+Description=Mail forwarding over ssh to server
+
+[Service]
+ExecStart=ssh -NT -oExitOnForwardFailure=yes -L1025:localhost:1025 server
+Restart=always
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target

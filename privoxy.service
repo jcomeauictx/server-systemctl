@@ -1,0 +1,11 @@
+[Unit]
+Description=Privoxy through server
+
+[Service]
+ExecStart=ssh -NT -oExitOnForwardFailure=yes -L8118:localhost:8118 server
+Restart=always
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target

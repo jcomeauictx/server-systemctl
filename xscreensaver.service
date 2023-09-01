@@ -1,0 +1,9 @@
+# from manpage for xscreensaver
+# does not work on Debian Buster as shown in manpage
+[Unit]
+Description=XScreenSaver
+[Service]
+ExecStart=/usr/bin/xscreensaver
+Restart=always
+[Install]
+WantedBy=default.target
