@@ -1,0 +1,9 @@
+[Unit]
+Description=Monero Daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/monerod --detach
+
+[Install]
+WantedBy=default.target
