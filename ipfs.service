@@ -5,6 +5,8 @@ Description=IPFS, InterPlanetary File System
 Type=simple
 ExecStart=%h/bin/%N daemon
 ExecStop=%h/bin/%N shutdown
+Restart=always
+RestartSec=60
 
 [Install]
 WantedBy=default.target

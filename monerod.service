@@ -4,6 +4,8 @@ Description=Monero Daemon
 [Service]
 Type=forking
 ExecStart=/usr/bin/monerod --detach
+Restart=always
+RestartSec=60
 
 [Install]
 WantedBy=default.target

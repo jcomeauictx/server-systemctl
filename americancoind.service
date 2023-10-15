@@ -3,8 +3,9 @@ Description=Americancoin Daemon
 
 [Service]
 Type=forking
-ExecStart=%h/bin/%N
-ExecStop=%h/bin/%N stop
+ExecStart=%h/bin/americancoind
+Restart=always
+RestartSec=60
 
 [Install]
 WantedBy=default.target
