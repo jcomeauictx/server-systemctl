@@ -5,6 +5,7 @@ After=network-online.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/monerod --non-interactive
+ExecStop=/usr/bin/monerod exit
 GuessMainPid=no
 Restart=always
 RestartSec=60
