@@ -1,11 +1,12 @@
 [Unit]
 Description=Americancoin miner
+Requires=americancoind.service
+After=americancoind.service
 
 [Service]
 Type=simple
+Environment="SALSA64=salsa20_macro64"
 ExecStart=%h/bin/simpleminer.py
-Requires=americancoind.service
-After=americancoind.service
 Restart=always
 RestartSec=60
 
