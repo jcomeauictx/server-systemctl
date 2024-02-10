@@ -1,0 +1,9 @@
+[Unit]
+Description=Original, localhost-only version of kybyz
+
+[Service]
+WorkingDirectory = /usr/src/jcomeauictx/kybyz/kybyz_v0
+ExecStart = make
+
+[Install]
+WantedBy=default.target
