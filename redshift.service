@@ -1,0 +1,8 @@
+# for Petaluma, CA, 38.2324° N, 122.6367° W
+[Unit]
+Description=redshift: blue light filtering at night
+[Service]
+ExecStart=/usr/bin/redshift -l 38.2324:-122.6367 -t 5500:3500 -m randr
+Restart=always
+[Install]
+WantedBy=default.target
