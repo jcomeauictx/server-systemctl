@@ -3,8 +3,10 @@ Description=IPFS, InterPlanetary File System
 
 [Service]
 Type=simple
-ExecStart=%h/bin/%N daemon
-ExecStop=%h/bin/%N shutdown
+# "server" profile keeps daemon from probing RFC1918 addresses
+ExecStartPre=bash -c "[ -d %h/.ipfs ] || %h/.local/bin/%N init --profile=server"
+ExecStart=%h/.local/bin/%N daemon
+ExecStop=%h/.local/bin/%N shutdown
 Restart=always
 RestartSec=60
 
