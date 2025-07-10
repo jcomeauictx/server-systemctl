@@ -3,7 +3,7 @@ Description=Bitccoin Daemon
 
 [Service]
 Type=forking
-ExecStart=/usr/local/bitcoin/bin/bitcoind
+ExecStart=%h/.local/bin/bitcoind
 Restart=always
 RestartSec=60
 
