@@ -2,8 +2,10 @@
 Description=Americancoin Daemon
 
 [Service]
-Type=forking
-ExecStart=%h/bin/americancoind
+# use `simple` for docker-installed americancoind, otherwise forking
+# (`simple` is default, so you can just leave the below line commented out)
+#Type=forking
+ExecStart=%h/.local/bin/americancoind
 Restart=always
 RestartSec=60
 
