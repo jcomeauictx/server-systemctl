@@ -1,0 +1,14 @@
+[Unit]
+Description=Americancoin daemon for docker installation
+Conflicts=americancoind-buster
+
+[Service]
+# use `simple` for docker-installed americancoind, otherwise forking
+# (but it's not working currently -- use americancoind-buster instead)
+Type=simple
+ExecStart=%h/.local/bin/americancoind.docker
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=default.target
