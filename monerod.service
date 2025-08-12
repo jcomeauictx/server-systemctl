@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/monerod --non-interactive
+ExecStart=/usr/bin/monerod --non-interactive --prune-blockchain
 ExecStop=/usr/bin/monerod exit
 Restart=always
 RestartSec=60
