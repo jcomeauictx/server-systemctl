@@ -1,5 +1,5 @@
 [Unit]
-Description=Bitccoin Daemon
+Description=Bitcoin Daemon
 
 [Service]
 Type=forking
